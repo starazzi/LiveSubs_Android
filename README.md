@@ -7,7 +7,7 @@ Free Android app: real-time translated subtitles for any live stream (Twitch, Ki
 - Customisable subtitles: text color/size, background color/opacity (live preview, applied instantly while running).
 
 ## Limits
-Some apps block audio capture and DRM content is not captured. Small Vosk models are less accurate than Whisper. Android 10+.
+Some apps block audio capture and DRM content is not captured. Small Vosk models are less accurate than Whisper. Android 10+
 
 ## Voice engine and translation (v1.4)
 - **Whisper** (whisper.cpp, offline) is the default engine: far more accurate than Vosk, especially for Russian and Korean, and it understands 57 of the 59 languages. Models (60 MB or 190 MB) download once from Hugging Face. Speech is cut into sentences at pauses, so subtitles appear 3 to 8 seconds after the words. **Vosk** stays available as the instant option.
