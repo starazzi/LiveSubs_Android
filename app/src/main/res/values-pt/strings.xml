@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc">Funciona em qualquer app: Twitch, Kick, YouTube e muitas mais.</string>
+    <string name="my_lang">A minha língua (traduzir para)</string>
+    <string name="stream_lang">Língua falada na live</string>
+    <string name="show_orig">Mostrar também o texto original</string>
+    <string name="appearance">Aspeto das legendas</string>
+    <string name="preview">Olá! Isto é uma legenda de exemplo.</string>
+    <string name="text_color">Cor das legendas</string>
+    <string name="text_size">Tamanho das legendas</string>
+    <string name="bg_color">Cor do fundo</string>
+    <string name="bg_opacity">Opacidade do fundo</string>
+    <string name="start">Iniciar legendas</string>
+    <string name="stop">Parar</string>
+    <string name="ready">Pronto.</string>
+    <string name="howto">Como usar: toca em Iniciar, autoriza a captura de áudio, abre a app ou o site da live e põe-na a tocar. As legendas aparecem por cima de tudo e podes arrastá-las para cima ou para baixo.</string>
+    <string name="st_overlay">Ativa a permissão para sobrepor a outras apps e toca de novo em Iniciar.</string>
+    <string name="st_audio">A permissão de áudio é necessária (serve só para captar o som da live, não usa o microfone).</string>
+    <string name="st_dl_voice">A descarregar modelo de voz… %1$d%%</string>
+    <string name="st_unzip">A descomprimir modelo de voz…</string>
+    <string name="st_dl_tr">A descarregar modelo de tradução…</string>
+    <string name="st_tr_fail">Falhou o download da tradução (%1$s). Na primeira vez é preciso internet.</string>
+    <string name="st_voice_fail">Erro a descarregar o modelo de voz: %1$s</string>
+    <string name="st_auth">Autoriza a captura de áudio…</string>
+    <string name="st_active">Legendas ativas! Abre a Twitch/Kick e põe a live a tocar.</string>
+    <string name="st_cancel">Captura de áudio cancelada.</string>
+    <string name="st_stopped">Parado.</string>
+    <string name="svc_loading">A carregar reconhecimento de voz…</string>
+    <string name="svc_listening">A ouvir… põe a live a tocar</string>
+    <string name="svc_error">Erro: %1$s</string>
+    <string name="notif_title">Legendas ativas</string>
+    <string name="notif_text">A traduzir a live. Abre a app para parar.</string>
+    <string name="engine_label">Reconhecimento de voz</string>
+    <string name="engine_small">Whisper Small – preciso (190 MB)</string>
+    <string name="engine_base">Whisper Base – mais rápido (60 MB)</string>
+    <string name="engine_vosk">Vosk – instantâneo, menos preciso</string>
+    <string name="online_tr">Tradução online (melhor qualidade)</string>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc">Работает в любом приложении: Twitch, Kick, YouTube и других.</string>
+    <string name="my_lang">Мой язык (переводить на)</string>
+    <string name="stream_lang">Язык, на котором говорят в стриме</string>
+    <string name="show_orig">Показывать также оригинальный текст</string>
+    <string name="appearance">Внешний вид субтитров</string>
+    <string name="preview">Привет! Это пример субтитров.</string>
+    <string name="text_color">Цвет субтитров</string>
+    <string name="text_size">Размер субтитров</string>
+    <string name="bg_color">Цвет фона</string>
+    <string name="bg_opacity">Непрозрачность фона</string>
+    <string name="start">Запустить субтитры</string>
+    <string name="stop">Остановить</string>
+    <string name="ready">Готово.</string>
+    <string name="howto">Как пользоваться: нажмите «Запустить», разрешите захват звука, откройте приложение или сайт стрима и включите его. Субтитры появятся поверх всего, их можно перетаскивать вверх и вниз.</string>
+    <string name="st_overlay">Включите разрешение «Поверх других приложений» и снова нажмите «Запустить».</string>
+    <string name="st_audio">Нужно разрешение на аудио (оно используется только для захвата звука стрима, микрофон не используется).</string>
+    <string name="st_dl_voice">Загрузка модели речи… %1$d%%</string>
+    <string name="st_unzip">Распаковка модели речи…</string>
+    <string name="st_dl_tr">Загрузка модели перевода…</string>
+    <string name="st_tr_fail">Не удалось загрузить перевод (%1$s). В первый раз нужен интернет.</string>
+    <string name="st_voice_fail">Ошибка загрузки модели речи: %1$s</string>
+    <string name="st_auth">Разрешите захват звука…</string>
+    <string name="st_active">Субтитры включены! Откройте Twitch/Kick и запустите стрим.</string>
+    <string name="st_cancel">Захват звука отменён.</string>
+    <string name="st_stopped">Остановлено.</string>
+    <string name="svc_loading">Загрузка распознавания речи…</string>
+    <string name="svc_listening">Слушаю… запустите стрим</string>
+    <string name="svc_error">Ошибка: %1$s</string>
+    <string name="notif_title">Субтитры включены</string>
+    <string name="notif_text">Идёт перевод стрима. Откройте приложение, чтобы остановить.</string>
+    <string name="engine_label">Распознавание речи</string>
+    <string name="engine_small">Whisper Small – точный (190 МБ)</string>
+    <string name="engine_base">Whisper Base – быстрее (60 МБ)</string>
+    <string name="engine_vosk">Vosk – мгновенный, менее точный</string>
+    <string name="online_tr">Онлайн-перевод (лучшее качество)</string>
+</resources>

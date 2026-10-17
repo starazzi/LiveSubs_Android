@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc">Funciona en cualquier app: Twitch, Kick, YouTube y más.</string>
+    <string name="my_lang">Mi idioma (traducir a)</string>
+    <string name="stream_lang">Idioma que se habla en el directo</string>
+    <string name="show_orig">Mostrar también el texto original</string>
+    <string name="appearance">Aspecto de los subtítulos</string>
+    <string name="preview">¡Hola! Este es un subtítulo de ejemplo.</string>
+    <string name="text_color">Color de los subtítulos</string>
+    <string name="text_size">Tamaño de los subtítulos</string>
+    <string name="bg_color">Color del fondo</string>
+    <string name="bg_opacity">Opacidad del fondo</string>
+    <string name="start">Iniciar subtítulos</string>
+    <string name="stop">Detener</string>
+    <string name="ready">Listo.</string>
+    <string name="howto">Cómo usar: pulsa Iniciar, permite la captura de audio, abre la app o web del directo y reprodúcelo. Los subtítulos aparecen sobre todo y puedes arrastrarlos hacia arriba o abajo.</string>
+    <string name="st_overlay">Activa el permiso para mostrar sobre otras apps y pulsa Iniciar de nuevo.</string>
+    <string name="st_audio">Se necesita el permiso de audio (solo sirve para captar el sonido del directo, no usa el micrófono).</string>
+    <string name="st_dl_voice">Descargando modelo de voz… %1$d%%</string>
+    <string name="st_unzip">Descomprimiendo modelo de voz…</string>
+    <string name="st_dl_tr">Descargando modelo de traducción…</string>
+    <string name="st_tr_fail">Falló la descarga de la traducción (%1$s). La primera vez se necesita internet.</string>
+    <string name="st_voice_fail">Error al descargar el modelo de voz: %1$s</string>
+    <string name="st_auth">Permite la captura de audio…</string>
+    <string name="st_active">¡Subtítulos activos! Abre Twitch/Kick y reproduce el directo.</string>
+    <string name="st_cancel">Captura de audio cancelada.</string>
+    <string name="st_stopped">Detenido.</string>
+    <string name="svc_loading">Cargando reconocimiento de voz…</string>
+    <string name="svc_listening">Escuchando… reproduce el directo</string>
+    <string name="svc_error">Error: %1$s</string>
+    <string name="notif_title">Subtítulos activos</string>
+    <string name="notif_text">Traduciendo el directo. Abre la app para detener.</string>
+    <string name="engine_label">Reconocimiento de voz</string>
+    <string name="engine_small">Whisper Small – preciso (190 MB)</string>
+    <string name="engine_base">Whisper Base – más rápido (60 MB)</string>
+    <string name="engine_vosk">Vosk – instantáneo, menos preciso</string>
+    <string name="online_tr">Traducción en línea (mejor calidad)</string>
+</resources>

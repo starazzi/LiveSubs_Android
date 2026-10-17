@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc">모든 앱에서 사용하세요: Twitch, Kick, YouTube 등.</string>
+    <string name="my_lang">내 언어 (번역할 언어)</string>
+    <string name="stream_lang">방송에서 사용하는 언어</string>
+    <string name="show_orig">원문도 함께 표시</string>
+    <string name="appearance">자막 모양</string>
+    <string name="preview">안녕하세요! 자막 예시입니다.</string>
+    <string name="text_color">자막 색상</string>
+    <string name="text_size">자막 크기</string>
+    <string name="bg_color">배경 색상</string>
+    <string name="bg_opacity">배경 불투명도</string>
+    <string name="start">자막 시작</string>
+    <string name="stop">중지</string>
+    <string name="ready">준비됨.</string>
+    <string name="howto">사용법: 시작을 누르고 오디오 캡처를 허용한 뒤, 방송 앱이나 사이트를 열어 재생하세요. 자막은 모든 화면 위에 표시되며 위아래로 드래그할 수 있습니다.</string>
+    <string name="st_overlay">다른 앱 위에 표시 권한을 켠 다음 시작을 다시 누르세요.</string>
+    <string name="st_audio">오디오 권한이 필요합니다 (방송 소리를 캡처하는 데만 사용하며 마이크는 사용하지 않습니다).</string>
+    <string name="st_dl_voice">음성 모델 다운로드 중… %1$d%%</string>
+    <string name="st_unzip">음성 모델 압축 해제 중…</string>
+    <string name="st_dl_tr">번역 모델 다운로드 중…</string>
+    <string name="st_tr_fail">번역 모델 다운로드 실패 (%1$s). 처음에는 인터넷이 필요합니다.</string>
+    <string name="st_voice_fail">음성 모델 다운로드 오류: %1$s</string>
+    <string name="st_auth">오디오 캡처를 허용하세요…</string>
+    <string name="st_active">자막이 켜졌습니다! Twitch/Kick을 열고 방송을 재생하세요.</string>
+    <string name="st_cancel">오디오 캡처가 취소되었습니다.</string>
+    <string name="st_stopped">중지됨.</string>
+    <string name="svc_loading">음성 인식 불러오는 중…</string>
+    <string name="svc_listening">듣는 중… 방송을 재생하세요</string>
+    <string name="svc_error">오류: %1$s</string>
+    <string name="notif_title">자막 켜짐</string>
+    <string name="notif_text">방송을 번역하는 중입니다. 중지하려면 앱을 여세요.</string>
+    <string name="engine_label">음성 인식</string>
+    <string name="engine_small">Whisper Small – 정확 (190MB)</string>
+    <string name="engine_base">Whisper Base – 더 빠름 (60MB)</string>
+    <string name="engine_vosk">Vosk – 즉시, 정확도 낮음</string>
+    <string name="online_tr">온라인 번역 (더 나은 품질)</string>
+</resources>

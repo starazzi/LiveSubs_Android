@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc">Funcționează în orice aplicație: Twitch, Kick, YouTube și altele.</string>
+    <string name="my_lang">Limba mea (traduce în)</string>
+    <string name="stream_lang">Limba vorbită în live</string>
+    <string name="show_orig">Arată și textul original</string>
+    <string name="appearance">Aspectul subtitrărilor</string>
+    <string name="preview">Salut! Aceasta este o subtitrare de exemplu.</string>
+    <string name="text_color">Culoarea subtitrărilor</string>
+    <string name="text_size">Dimensiunea subtitrărilor</string>
+    <string name="bg_color">Culoarea fundalului</string>
+    <string name="bg_opacity">Opacitatea fundalului</string>
+    <string name="start">Pornește subtitrările</string>
+    <string name="stop">Oprește</string>
+    <string name="ready">Gata.</string>
+    <string name="howto">Cum se folosește: apasă Pornește, permite captura audio, deschide aplicația sau site-ul live-ului și redă-l. Subtitrările apar peste tot și le poți trage în sus sau în jos.</string>
+    <string name="st_overlay">Activează permisiunea de afișare peste alte aplicații și apasă din nou Pornește.</string>
+    <string name="st_audio">Este necesară permisiunea audio (folosită doar pentru a capta sunetul live-ului, nu microfonul).</string>
+    <string name="st_dl_voice">Se descarcă modelul vocal… %1$d%%</string>
+    <string name="st_unzip">Se dezarhivează modelul vocal…</string>
+    <string name="st_dl_tr">Se descarcă modelul de traducere…</string>
+    <string name="st_tr_fail">Descărcarea traducerii a eșuat (%1$s). Prima dată e nevoie de internet.</string>
+    <string name="st_voice_fail">Eroare la descărcarea modelului vocal: %1$s</string>
+    <string name="st_auth">Permite captura audio…</string>
+    <string name="st_active">Subtitrări active! Deschide Twitch/Kick și redă live-ul.</string>
+    <string name="st_cancel">Captura audio a fost anulată.</string>
+    <string name="st_stopped">Oprit.</string>
+    <string name="svc_loading">Se încarcă recunoașterea vocală…</string>
+    <string name="svc_listening">Ascult… redă live-ul</string>
+    <string name="svc_error">Eroare: %1$s</string>
+    <string name="notif_title">Subtitrări active</string>
+    <string name="notif_text">Se traduce live-ul. Deschide aplicația pentru a opri.</string>
+    <string name="engine_label">Recunoaștere vocală</string>
+    <string name="engine_small">Whisper Small – precis (190 MB)</string>
+    <string name="engine_base">Whisper Base – mai rapid (60 MB)</string>
+    <string name="engine_vosk">Vosk – instantaneu, mai puțin precis</string>
+    <string name="online_tr">Traducere online (calitate mai bună)</string>
+</resources>

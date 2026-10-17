@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc">あらゆるアプリで使えます：Twitch、Kick、YouTube など。</string>
+    <string name="my_lang">自分の言語（翻訳先）</string>
+    <string name="stream_lang">配信で話されている言語</string>
+    <string name="show_orig">原文も表示する</string>
+    <string name="appearance">字幕の外観</string>
+    <string name="preview">こんにちは！これは字幕のサンプルです。</string>
+    <string name="text_color">字幕の色</string>
+    <string name="text_size">字幕の大きさ</string>
+    <string name="bg_color">背景の色</string>
+    <string name="bg_opacity">背景の不透明度</string>
+    <string name="start">字幕を開始</string>
+    <string name="stop">停止</string>
+    <string name="ready">準備完了。</string>
+    <string name="howto">使い方：開始をタップし、音声キャプチャを許可して、配信のアプリまたはサイトを開いて再生してください。字幕はすべての画面の上に表示され、上下にドラッグできます。</string>
+    <string name="st_overlay">他のアプリの上に重ねて表示する権限をオンにして、もう一度開始をタップしてください。</string>
+    <string name="st_audio">音声の権限が必要です（配信の音を取得するためだけに使い、マイクは使用しません）。</string>
+    <string name="st_dl_voice">音声モデルをダウンロード中… %1$d%%</string>
+    <string name="st_unzip">音声モデルを展開中…</string>
+    <string name="st_dl_tr">翻訳モデルをダウンロード中…</string>
+    <string name="st_tr_fail">翻訳モデルのダウンロードに失敗しました（%1$s）。初回はインターネットが必要です。</string>
+    <string name="st_voice_fail">音声モデルのダウンロードエラー：%1$s</string>
+    <string name="st_auth">音声キャプチャを許可してください…</string>
+    <string name="st_active">字幕が有効です！Twitch/Kick を開いて配信を再生してください。</string>
+    <string name="st_cancel">音声キャプチャがキャンセルされました。</string>
+    <string name="st_stopped">停止しました。</string>
+    <string name="svc_loading">音声認識を読み込み中…</string>
+    <string name="svc_listening">聞き取り中… 配信を再生してください</string>
+    <string name="svc_error">エラー：%1$s</string>
+    <string name="notif_title">字幕が有効</string>
+    <string name="notif_text">配信を翻訳中です。停止するにはアプリを開いてください。</string>
+    <string name="engine_label">音声認識</string>
+    <string name="engine_small">Whisper Small – 高精度（190MB）</string>
+    <string name="engine_base">Whisper Base – 高速（60MB）</string>
+    <string name="engine_vosk">Vosk – 即時、精度は低め</string>
+    <string name="online_tr">オンライン翻訳（高品質）</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">LiveSubs</string>
+    <string name="desc">Works in any app: Twitch, Kick, YouTube and more.</string>
+    <string name="my_lang">My language (translate into)</string>
+    <string name="stream_lang">Language spoken in the stream</string>
+    <string name="show_orig">Also show the original text</string>
+    <string name="appearance">Subtitle appearance</string>
+    <string name="preview">Hello! This is a sample subtitle.</string>
+    <string name="text_color">Subtitle color</string>
+    <string name="text_size">Subtitle size</string>
+    <string name="bg_color">Background color</string>
+    <string name="bg_opacity">Background opacity</string>
+    <string name="start">Start subtitles</string>
+    <string name="stop">Stop</string>
+    <string name="ready">Ready.</string>
+    <string name="howto">How to use: tap Start, allow audio capture, open the stream app or site and play it. Subtitles appear over everything and you can drag them up or down.</string>
+    <string name="st_overlay">Enable the permission to display over other apps, then tap Start again.</string>
+    <string name="st_audio">Audio permission is required (it is only used to capture the stream’s sound, not the microphone).</string>
+    <string name="st_dl_voice">Downloading speech model… %1$d%%</string>
+    <string name="st_unzip">Unpacking speech model…</string>
+    <string name="st_dl_tr">Downloading translation model…</string>
+    <string name="st_tr_fail">Translation download failed (%1$s). Internet is needed the first time.</string>
+    <string name="st_voice_fail">Error downloading the speech model: %1$s</string>
+    <string name="st_auth">Allow audio capture…</string>
+    <string name="st_active">Subtitles active! Open Twitch/Kick and play the stream.</string>
+    <string name="st_cancel">Audio capture cancelled.</string>
+    <string name="st_stopped">Stopped.</string>
+    <string name="svc_loading">Loading speech recognition…</string>
+    <string name="svc_listening">Listening… play the stream</string>
+    <string name="svc_error">Error: %1$s</string>
+    <string name="notif_title">Subtitles active</string>
+    <string name="notif_text">Translating the stream. Open the app to stop.</string>
+    <string name="engine_label">Speech recognition</string>
+    <string name="engine_small">Whisper Small – accurate (190 MB)</string>
+    <string name="engine_base">Whisper Base – faster (60 MB)</string>
+    <string name="engine_vosk">Vosk – instant, less accurate</string>
+    <string name="online_tr">Online translation (better quality)</string>
+</resources>

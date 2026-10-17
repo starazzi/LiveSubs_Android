@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc">Fonctionne dans toutes les applis : Twitch, Kick, YouTube et plus encore.</string>
+    <string name="my_lang">Ma langue (traduire vers)</string>
+    <string name="stream_lang">Langue parlée dans le live</string>
+    <string name="show_orig">Afficher aussi le texte original</string>
+    <string name="appearance">Apparence des sous-titres</string>
+    <string name="preview">Bonjour ! Ceci est un sous-titre d’exemple.</string>
+    <string name="text_color">Couleur des sous-titres</string>
+    <string name="text_size">Taille des sous-titres</string>
+    <string name="bg_color">Couleur du fond</string>
+    <string name="bg_opacity">Opacité du fond</string>
+    <string name="start">Démarrer les sous-titres</string>
+    <string name="stop">Arrêter</string>
+    <string name="ready">Prêt.</string>
+    <string name="howto">Mode d’emploi : appuyez sur Démarrer, autorisez la capture audio, ouvrez l’appli ou le site du live et lancez-le. Les sous-titres s’affichent par-dessus tout et vous pouvez les faire glisser vers le haut ou le bas.</string>
+    <string name="st_overlay">Activez l’autorisation d’affichage par-dessus les autres applis, puis appuyez de nouveau sur Démarrer.</string>
+    <string name="st_audio">L’autorisation audio est nécessaire (elle sert uniquement à capter le son du live, pas le micro).</string>
+    <string name="st_dl_voice">Téléchargement du modèle vocal… %1$d%%</string>
+    <string name="st_unzip">Décompression du modèle vocal…</string>
+    <string name="st_dl_tr">Téléchargement du modèle de traduction…</string>
+    <string name="st_tr_fail">Échec du téléchargement de la traduction (%1$s). Internet est nécessaire la première fois.</string>
+    <string name="st_voice_fail">Erreur de téléchargement du modèle vocal : %1$s</string>
+    <string name="st_auth">Autorisez la capture audio…</string>
+    <string name="st_active">Sous-titres actifs ! Ouvrez Twitch/Kick et lancez le live.</string>
+    <string name="st_cancel">Capture audio annulée.</string>
+    <string name="st_stopped">Arrêté.</string>
+    <string name="svc_loading">Chargement de la reconnaissance vocale…</string>
+    <string name="svc_listening">À l’écoute… lancez le live</string>
+    <string name="svc_error">Erreur : %1$s</string>
+    <string name="notif_title">Sous-titres actifs</string>
+    <string name="notif_text">Traduction du live en cours. Ouvrez l’appli pour arrêter.</string>
+    <string name="engine_label">Reconnaissance vocale</string>
+    <string name="engine_small">Whisper Small – précis (190 Mo)</string>
+    <string name="engine_base">Whisper Base – plus rapide (60 Mo)</string>
+    <string name="engine_vosk">Vosk – instantané, moins précis</string>
+    <string name="online_tr">Traduction en ligne (meilleure qualité)</string>
+</resources>

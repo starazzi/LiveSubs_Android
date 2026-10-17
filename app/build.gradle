@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'pt.livelegendas'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "pt.livelegendas"
+        minSdk 29
+        targetSdk 34
+        versionCode 5
+        versionName "1.4"
+        ndk { abiFilters 'arm64-v8a' }   // Whisper corre em telemóveis de 64 bits
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions { jvmTarget = '17' }
+    lint { checkReleaseBuilds false; abortOnError false }
+    externalNativeBuild { cmake { path "src/main/cpp/CMakeLists.txt"; version "3.22.1" } }
+    def ndkHome = System.getenv("ANDROID_NDK_HOME")
+    if (ndkHome) { ndkPath ndkHome }
+    def ksPath = System.getenv("KEYSTORE_PATH")
+    signingConfigs {
+        if (ksPath) {
+            release {
+                storeFile file(ksPath)
+                storePassword System.getenv("KEYSTORE_PASSWORD")
+                keyAlias System.getenv("KEY_ALIAS")
+                keyPassword System.getenv("KEY_PASSWORD")
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            // Sem keystore próprio, assina com a chave debug (instalável, mas não atualizável entre builds)
+            signingConfig ksPath ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+    packaging {
+        jniLibs { useLegacyPackaging = true }   // necessário para o Vosk/JNA carregar as libs nativas
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'com.google.mlkit:translate:17.0.3'        // tradução offline (grátis)
+    implementation 'net.java.dev.jna:jna:5.13.0@aar'
+    implementation 'com.alphacephei:vosk-android:0.3.47'      // reconhecimento de voz offline (grátis)
+}
