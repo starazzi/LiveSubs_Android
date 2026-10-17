@@ -23,7 +23,7 @@ android {
     lint { checkReleaseBuilds false; abortOnError false }
     externalNativeBuild { cmake { path "src/main/cpp/CMakeLists.txt"; version "3.22.1" } }
     def ndkHome = System.getenv("ANDROID_NDK_HOME")
-    if (ndkHome) { ndkPath ndkHome }
+    if (ndkHome) { ndkVersion new File(ndkHome).name }
     def ksPath = System.getenv("KEYSTORE_PATH")
     signingConfigs {
         if (ksPath) {
