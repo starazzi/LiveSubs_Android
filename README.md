@@ -14,6 +14,9 @@ Some apps block audio capture and DRM content is not captured. Small Vosk models
 - **Translation**: by default the free Google Translate web endpoint (no key, needs internet; unofficial, so it may be limited or stop working; the transcribed text is sent to Google). Turn "Online translation" off to stay fully offline with ML Kit. ML Kit is also the automatic fallback.
 - The workflow clones whisper.cpp (tag v1.7.4) at build time; the APK is 64-bit only.
 
+## Voice model per language (v1.5)
+Each spoken language has its own list of phone-friendly models, and the choice is remembered per language: Vosk small models (31 to 133 MB, instant), plus Whisper Tiny (30 MB), Base (60 MB) and Small (190 MB). Large Vosk models (300 MB to 2 GB) are not offered because they need several GB of RAM. Arabic and Swedish only have large Vosk models, so there they use Whisper.
+
 ## ❤️ Support the Project
 
 If you enjoy using this app and find it useful, consider supporting its development with a cryptocurrency donation.

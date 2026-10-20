@@ -35,4 +35,6 @@
     <string name="engine_base">Whisper Base – 高速（60MB）</string>
     <string name="engine_vosk">Vosk – 即時、精度は低め</string>
     <string name="online_tr">オンライン翻訳（高品質）</string>
+    <string name="model_hint">Vosk：即時、精度は低め。Whisper：数秒の遅延、高精度。選択は言語ごとに保存されます。</string>
+    <string name="engine_tiny">Whisper Tiny – 最速、精度は低め（30MB）</string>
 </resources>

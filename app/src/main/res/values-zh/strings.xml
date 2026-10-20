@@ -35,4 +35,6 @@
     <string name="engine_base">Whisper Base – 更快（60MB）</string>
     <string name="engine_vosk">Vosk – 即时，精度较低</string>
     <string name="online_tr">在线翻译（质量更好）</string>
+    <string name="model_hint">Vosk：即时，精度较低。Whisper：延迟几秒，更精准。每种语言的选择会被保存。</string>
+    <string name="engine_tiny">Whisper Tiny – 最快，精度较低（30MB）</string>
 </resources>

@@ -35,4 +35,6 @@
     <string name="engine_base">Whisper Base – mais rápido (60 MB)</string>
     <string name="engine_vosk">Vosk – instantâneo, menos preciso</string>
     <string name="online_tr">Tradução online (melhor qualidade)</string>
+    <string name="model_hint">Vosk: instantâneo, menos preciso. Whisper: demora uns segundos, mais preciso. A escolha fica guardada para cada língua.</string>
+    <string name="engine_tiny">Whisper Tiny – o mais rápido, menos preciso (30 MB)</string>
 </resources>

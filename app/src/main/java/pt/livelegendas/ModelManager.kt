@@ -17,15 +17,18 @@ object ModelManager {
     private fun isInstalled(ctx: Context, name: String) =
         File(root(ctx), "$name.ok").exists() && modelDir(ctx, name).isDirectory
 
-    private fun whisperName(engine: String) =
-        if (engine == "whisper_base") "ggml-base-q5_1.bin" else "ggml-small-q5_1.bin"
+    private fun whisperName(engine: String) = when (engine) {
+        "whisper_tiny" -> "ggml-tiny-q5_1.bin"
+        "whisper_base" -> "ggml-base-q5_1.bin"
+        else -> "ggml-small-q5_1.bin"
+    }
     fun whisperFile(ctx: Context, engine: String) = File(root(ctx), whisperName(engine))
 
     /** Descarrega o que o motor de voz escolhido precisa. onProgress(%) — -1 = a descomprimir. */
     @Throws(Exception::class)
-    fun ensureFor(ctx: Context, engine: String, voskModel: String?, onProgress: (Int) -> Unit) {
-        if (engine == "vosk") ensure(ctx, voskModel ?: throw IOException("sem modelo"), onProgress)
-        else ensureWhisper(ctx, engine, onProgress)
+    fun ensureFor(ctx: Context, modelId: String, onProgress: (Int) -> Unit) {
+        if (modelId.startsWith("whisper_")) ensureWhisper(ctx, modelId, onProgress)
+        else ensure(ctx, modelId, onProgress)
     }
 
     @Throws(Exception::class)

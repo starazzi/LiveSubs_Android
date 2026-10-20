@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var switchOrig: MaterialSwitch
     private lateinit var spEngine: Spinner
     private lateinit var switchOnline: MaterialSwitch
-    private val engineIds = listOf("whisper_small", "whisper_base", "vosk")
+    private var modelOpts: List<Langs.ModelOpt> = emptyList()
     private lateinit var preview: TextView
     private lateinit var rowText: LinearLayout
     private lateinit var rowBg: LinearLayout
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                 .putExtra(CaptureService.EXTRA_DATA, data)
                 .putExtra(CaptureService.EXTRA_SRC, p.src)
                 .putExtra(CaptureService.EXTRA_TGT, p.tgt)
-                .putExtra(CaptureService.EXTRA_ENGINE, p.engine)
+                .putExtra(CaptureService.EXTRA_ENGINE, p.modelFor(p.src))
             ContextCompat.startForegroundService(this, i)
             status.text = Ui.s(this, R.string.st_active)
         } else {
@@ -114,15 +114,14 @@ class MainActivity : AppCompatActivity() {
             val c = tgtList[pos].code
             if (c != p.tgt) { p.tgt = c; rebuildSources() }   // só grava se o utilizador mudar
         }
-        onPick(spSrc) { if (it in srcList.indices) p.src = srcList[it].code }
+        onPick(spSrc) { if (it in srcList.indices) { p.src = srcList[it].code; buildModelSpinner() } }
 
         switchOrig.isChecked = p.showOrig
         switchOrig.setOnCheckedChangeListener { _, c -> p.showOrig = c }
         switchOnline.isChecked = p.onlineTr
         switchOnline.setOnCheckedChangeListener { _, c -> p.onlineTr = c }
         onPick(spEngine) { pos ->
-            val e = engineIds[pos]
-            if (e != p.engine) { p.engine = e; rebuildSources() }
+            if (pos in modelOpts.indices) p.setModel(p.src, modelOpts[pos].id)   // escolha guardada por língua
         }
 
         // Aspeto das legendas
@@ -151,10 +150,18 @@ class MainActivity : AppCompatActivity() {
 
     private var lastReady = ""
 
-    private fun buildEngineSpinner() {
-        val labels = listOf(R.string.engine_small, R.string.engine_base, R.string.engine_vosk).map { Ui.s(this, it) }
-        spEngine.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, labels)
-        spEngine.setSelection(engineIds.indexOf(p.engine).coerceAtLeast(0))
+    private fun modelLabel(o: Langs.ModelOpt): String = when (o.id) {
+        "whisper_tiny" -> Ui.s(this, R.string.engine_tiny)
+        "whisper_base" -> Ui.s(this, R.string.engine_base)
+        "whisper_small" -> Ui.s(this, R.string.engine_small)
+        else -> "Vosk · ${o.id.removePrefix("vosk-model-")} · ${o.mb} MB"
+    }
+
+    /** Modelos disponíveis para a língua falada escolhida. */
+    private fun buildModelSpinner() {
+        modelOpts = Langs.optionsFor(p.src)
+        spEngine.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, modelOpts.map { modelLabel(it) })
+        spEngine.setSelection(modelOpts.indexOfFirst { it.id == p.modelFor(p.src) }.coerceAtLeast(0))
     }
 
     /** Aplica todos os textos da interface na língua do telemóvel (ou inglês). */
@@ -171,8 +178,9 @@ class MainActivity : AppCompatActivity() {
         tv(R.id.t_howto, R.string.howto)
         switchOrig.text = Ui.s(this, R.string.show_orig)
         tv(R.id.t_engine, R.string.engine_label)
+        tv(R.id.t_model_hint, R.string.model_hint)
         switchOnline.text = Ui.s(this, R.string.online_tr)
-        buildEngineSpinner()
+        buildModelSpinner()
         preview.text = Ui.s(this, R.string.preview)
         btnStart.text = Ui.s(this, R.string.start)
         btnStop.text = Ui.s(this, R.string.stop)
@@ -201,7 +209,7 @@ class MainActivity : AppCompatActivity() {
 
     /** Línguas da live (com modelo de voz gratuito), com os nomes escritos na língua para onde se traduz. */
     private fun rebuildSources() {
-        val items = Langs.sorted(Langs.sourcesFor(p.engine).filter { it.code != p.tgt }, p.tgt)
+        val items = Langs.sorted(Langs.sourcesAll().filter { it.code != p.tgt }, p.tgt)
         srcList = items.map { it.first }
         spSrc.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items.map { it.second })
         spSrc.setSelection(srcList.indexOfFirst { it.code == p.src }.coerceAtLeast(0))
@@ -273,7 +281,7 @@ class MainActivity : AppCompatActivity() {
         setBusy(true)
         Thread {
             try {
-                ModelManager.ensureFor(this, p.engine, src.vosk) { pct ->
+                ModelManager.ensureFor(this, p.modelFor(p.src)) { pct ->
                     runOnUiThread {
                         progress.isIndeterminate = pct < 0
                         if (pct < 0) status.text = Ui.s(this, R.string.st_unzip) else {

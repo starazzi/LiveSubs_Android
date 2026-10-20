@@ -117,7 +117,7 @@ class CaptureService : Service() {
             prefs = Prefs(this)
             srcLang = Langs.byCode(intent.getStringExtra(EXTRA_SRC) ?: "ko")
             tgtLang = Langs.byCode(intent.getStringExtra(EXTRA_TGT) ?: "en")
-            val engine = intent.getStringExtra(EXTRA_ENGINE) ?: "vosk"
+            val engine = intent.getStringExtra(EXTRA_ENGINE) ?: "whisper_base"
 
             val mpm = getSystemService(MediaProjectionManager::class.java)
             projection = mpm.getMediaProjection(code, data).also {
@@ -275,19 +275,19 @@ class CaptureService : Service() {
             )
             translator = tr
             Tasks.await(tr.downloadModelIfNeeded(DownloadConditions.Builder().build()))
-            if (engine == "vosk") voskLoop() else whisperLoop(engine)
+            if (engine.startsWith("whisper_")) whisperLoop(engine) else voskLoop(engine)
         } catch (e: Throwable) {
             postStatus(Ui.s(this, R.string.svc_error, e.message))
             main.postDelayed({ stopSelf() }, 6000)
         }
     }
 
-    private fun voskLoop() {
+    private fun voskLoop(modelName: String) {
         var model: Model? = null
         var rec: Recognizer? = null
         var record: AudioRecord? = null
         try {
-            model = Model(ModelManager.modelDir(this, srcLang.vosk!!).absolutePath)
+            model = Model(ModelManager.modelDir(this, modelName).absolutePath)
             rec = Recognizer(model, SR.toFloat())
             record = buildRecord()
             record.startRecording()

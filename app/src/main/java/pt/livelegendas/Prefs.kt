@@ -14,6 +14,18 @@ class Prefs(ctx: Context) {
     var engine: String
         get() = sp.getString("engine", "whisper_small")!!
         set(v) = sp.edit().putString("engine", v).apply()
+    /** Modelo de voz escolhido para a língua falada [code]. */
+    fun modelFor(code: String): String {
+        val opts = Langs.optionsFor(code)
+        sp.getString("pick_$code", null)?.let { saved -> if (opts.any { it.id == saved }) return saved }
+        val old = sp.getString("engine", "whisper_small")!!   // escolha das versões anteriores
+        val pick = if (old == "vosk") opts.firstOrNull { !it.id.startsWith("whisper") } ?: opts.firstOrNull { it.id == "whisper_base" }
+        else opts.firstOrNull { it.id == old }
+        return (pick ?: opts.first()).id
+    }
+
+    fun setModel(code: String, id: String) = sp.edit().putString("pick_$code", id).apply()
+
     var onlineTr: Boolean
         get() = sp.getBoolean("onlineTr", true)
         set(v) = sp.edit().putBoolean("onlineTr", v).apply()

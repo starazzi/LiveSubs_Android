@@ -26,7 +26,7 @@ object Ui {
         R.string.st_dl_voice, R.string.st_unzip, R.string.st_dl_tr, R.string.st_tr_fail, R.string.st_voice_fail,
         R.string.st_auth, R.string.st_active, R.string.st_cancel, R.string.st_stopped, R.string.svc_loading,
         R.string.svc_listening, R.string.svc_error, R.string.notif_title, R.string.notif_text,
-        R.string.engine_label, R.string.engine_small, R.string.engine_base, R.string.engine_vosk, R.string.online_tr
+        R.string.engine_label, R.string.engine_small, R.string.engine_base, R.string.engine_vosk, R.string.online_tr, R.string.model_hint, R.string.engine_tiny
     )
 
     private fun prefs(ctx: Context) = ctx.applicationContext.getSharedPreferences("ui_mt", Context.MODE_PRIVATE)
